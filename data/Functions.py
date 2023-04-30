@@ -71,7 +71,7 @@ def data_processing(dataset):
     dataset2['model'] = dataset2['model'].apply(lambda x: re.search(pattern, x).group())
 
     #Drop columns
-    dataset2 = dataset2.drop(columns = {'max_torque','max_power','fuel_type','rear_brakes_type','transmission_type','segment','steering_type','engine_type'})
+    dataset2 = dataset2.drop(columns = {'fuel_type','rear_brakes_type','transmission_type','segment','steering_type','engine_type'})
 
     dataset2['area_cluster'] = dataset2['area_cluster'].astype(int)
     dataset2['model'] = dataset2['model'].astype(int)
